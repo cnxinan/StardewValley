@@ -1,39 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Label="Globals">
-    <TargetFramework>net40</TargetFramework>
-    <Platforms>x86</Platforms>
-  </PropertyGroup>
-
   <PropertyGroup>
     <AssemblyName>StardewValley.GameData</AssemblyName>
-    <RootNamespace>StardewValley.GameData</RootNamespace>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Optimize>false</Optimize>
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-
+  <PropertyGroup />
   <ItemGroup>
-    <Reference Include="Microsoft.Xna.Framework">
-      <HintPath>../lib/Microsoft.Xna.Framework.dll</HintPath>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\lib\MonoGame.Framework.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="..\Microsoft.Xna.Framework.RuntimeProfile">
-      <LogicalName>Microsoft.Xna.Framework.RuntimeProfile</LogicalName>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

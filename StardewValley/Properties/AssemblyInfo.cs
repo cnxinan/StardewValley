@@ -1,22 +1,16 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 using System.Security;
 using System.Security.Permissions;
 
-[assembly: CompilationRelaxations(8)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
-[assembly: AssemblyTitle("Stardew Valley")]
-[assembly: AssemblyProduct("Stardew Valley")]
-[assembly: AssemblyDescription("")]
+[assembly: InternalsVisibleTo("StardewModdingAPI")]
 [assembly: AssemblyCompany("ConcernedApe")]
+[assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCopyright("Copyright © ConcernedApe 2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: ComVisible(false)]
-[assembly: Guid("cf94604e-6069-4782-a33b-605954798003")]
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
-[assembly: AssemblyVersion("1.3.7693.392")]
-[module: UnverifiableCode]
+[assembly: AssemblyFileVersion("1.6.8.24119")]
+[assembly: AssemblyInformationalVersion("1.6.8, , 24119, 1.6.6")]
+[assembly: AssemblyProduct("Stardew Valley")]
+[assembly: AssemblyTitle("Stardew Valley")]
+[assembly: AssemblyVersion("1.6.8.24119")]

@@ -1,8 +1,8 @@
-using Sickhead.Engine.Util;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using Sickhead.Engine.Util;
 
 public static class ObjToStr
 {
@@ -99,7 +99,7 @@ public static class ObjToStr
 	{
 		Type type = obj.GetType();
 		_cache.Clear();
-		if (!_cache.TryGetValue(obj.GetType(), out ToStringDescription desc))
+		if (!_cache.TryGetValue(obj.GetType(), out var desc))
 		{
 			ToStringDescription toStringDescription = default(ToStringDescription);
 			toStringDescription.Type = type;
@@ -119,7 +119,6 @@ public static class ObjToStr
 				{
 					item.Format = "\"{0}\"";
 				}
-				_ = k.GetDataType().IsArray;
 				if (dataType2.HasElementType)
 				{
 					item.Format = "{1}[{2}] {0}";
@@ -136,14 +135,14 @@ public static class ObjToStr
 				_stringBuilder.Append(desc.Type.Name);
 				_stringBuilder.Append(style.ObjectDelimiter);
 			}
-			for (int j = 0; j < desc.Members.Count; j++)
+			for (int i = 0; i < desc.Members.Count; i++)
 			{
-				ToStringMember i = desc.Members[j];
-				Type dataType = i.Member.GetDataType();
-				object val = i.Member.GetValue(obj);
+				ToStringMember j = desc.Members[i];
+				Type dataType = j.Member.GetDataType();
+				object val = j.Member.GetValue(obj);
 				_stringBuilder.Append(dataType.Name);
 				_stringBuilder.Append(" ");
-				_stringBuilder.Append(i.Name);
+				_stringBuilder.Append(j.Name);
 				_stringBuilder.Append(style.MemberNameValueDelimiter);
 				if (val == null)
 				{
@@ -156,14 +155,14 @@ public static class ObjToStr
 					{
 						Type etype = vtype.GetElementType();
 						string ecount = "?";
-						_stringBuilder.AppendFormat(i.Format, val, etype, ecount);
+						_stringBuilder.AppendFormat(j.Format, val, etype, ecount);
 					}
 					else
 					{
-						_stringBuilder.AppendFormat(i.Format, val);
+						_stringBuilder.AppendFormat(j.Format, val);
 					}
 				}
-				if (j != desc.Members.Count - 1)
+				if (i != desc.Members.Count - 1)
 				{
 					_stringBuilder.Append(style.MemberDelimiter);
 				}

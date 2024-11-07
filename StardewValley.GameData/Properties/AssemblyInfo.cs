@@ -1,18 +1,13 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-[assembly: CompilationRelaxations(8)]
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
-[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: AssemblyCompany("ConcernedApe")]
+[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyCopyright("Copyright © ConcernedApe 2013")]
+[assembly: AssemblyFileVersion("1.6.8.24119")]
+[assembly: AssemblyInformationalVersion("1.6.8, , 24119, 1.6.6")]
+[assembly: AssemblyProduct("Stardew Valley")]
 [assembly: AssemblyTitle("StardewValley.GameData")]
-[assembly: AssemblyProduct("StardewValley.GameData")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: ComVisible(false)]
-[assembly: Guid("8da11a36-d40e-47bc-89fc-8d7425e3aaef")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.6.8.24119")]
