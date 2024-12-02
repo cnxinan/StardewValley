@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StardewValley.GameData", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stardew-Valley", "StardewValley\Stardew-Valley.csproj", "{31AF75F3-D4C0-4231-AFED-93C9A9DC3E9B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{59DDE4F0-61B1-43E0-80B6-E3432FC7DC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StardewValley.Hashing", "StardewValley.Hashing\StardewValley.Hashing.csproj", "{773D28CC-B3F4-4B7C-B351-155E8522D9A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{31AF75F3-D4C0-4231-AFED-93C9A9DC3E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31AF75F3-D4C0-4231-AFED-93C9A9DC3E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31AF75F3-D4C0-4231-AFED-93C9A9DC3E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773D28CC-B3F4-4B7C-B351-155E8522D9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773D28CC-B3F4-4B7C-B351-155E8522D9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773D28CC-B3F4-4B7C-B351-155E8522D9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773D28CC-B3F4-4B7C-B351-155E8522D9A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{773D28CC-B3F4-4B7C-B351-155E8522D9A3} = {59DDE4F0-61B1-43E0-80B6-E3432FC7DC13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6DA807B-7E25-4385-8C42-DC3DC743958D}

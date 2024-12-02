@@ -22,12 +22,8 @@
     <EmbeddedResource Include="StardewValley.Icon.bmp" LogicalName="StardewValley.Icon.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.HashFunction.Core" Version="1.8.2.2" />
-    <PackageReference Include="System.Data.HashFunction.Interfaces" Version="1.0.0.2" />
-    <PackageReference Include="System.Data.HashFunction.xxHash" Version="1.8.2.2" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\StardewValley.GameData\StardewValley.GameData.csproj" />
+    <ProjectReference Include="..\StardewValley.Hashing\StardewValley.Hashing.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BmFont">
@@ -56,6 +52,6 @@
     </Reference>
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy /Y /I &quot;$(SolutionDir)\lib\SDL2.dll&quot; &quot;$(TargetDir)&quot;" />
+    <Exec Command="xcopy /Y /I &quot;$(SolutionDir)\lib\SDL2.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y /I &quot;$(SolutionDir)\lib\soft_oal.dll&quot; &quot;$(TargetDir)&quot;" />
   </Target>
 </Project>
